@@ -1,0 +1,25 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+
+<h2>Evento</h2>
+
+    <input type="number" name="id_evento" value="{{ evento.id }}" hidden>
+    <br>
+    <label>Titulo</label><br>
+    {{ evento.titulo }}
+    <br><br>
+    <label>Data do Evento</label><br>
+    {{ evento.get_data_input_evento }}
+    <br><br>
+    <label>Descrição</label><br>
+    {{ evento.descricao }}
+    <br><br>
+    <label>Agendado por</label>
+    {{ evento.usuario }}
+    <br><br>
+    <a href="/">
+        <button type="button">Voltar</button>
+    </a>
+
+{% endblock %}
